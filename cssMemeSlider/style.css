@@ -11,6 +11,7 @@ body{
 
 .slider{
     display: flex;
+    flex-direction: column;
     position: relative;
     max-width: 1300px;
     height: auto;
@@ -53,11 +54,21 @@ body{
     border-radius: 50%;
     border: 1px solid white;
     background-color: rgb(6, 88, 211);
+    cursor: pointer;
+}
+
+.slider_dot:hover{
+    background-color: white;
 }
 
 .dot_active{
     background-color: black;
     border-color: rgb(6, 88, 211);
+}
+
+.dot_active:hover{
+    background-color: black;
+    border-color: white;
 }
 
 .slider_text{
@@ -86,4 +97,27 @@ body{
     /* display: flex; */
     visibility: visible;
     animation: showLeft 3s;
+}
+
+@media screen and (max-width: 768px) {
+    .slider{
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider_image{
+        height: 300px;
+        width: 500px;
+    }
+    
+    .slider_text{
+        width: 500px;
+        margin-top: 20px;
+    }
+
+    .slider_pagination{
+        justify-content: center;
+        width: 500px;
+    }
 }

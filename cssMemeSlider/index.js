@@ -2,7 +2,7 @@ const sliderImages = document.querySelectorAll(".slider_image");
 const sliderLine = document.querySelector(".slider_line");
 const paginationDots = document.querySelectorAll(".slider_dot");
 const sliderText = document.querySelectorAll(".meme_text");
-let imageWidth = 1300;
+let imageWidth = window.innerWidth > 768 ? 1300 : 500;
 
 function updatePaginationDots(index) {
     paginationDots.forEach(dot=> dot.classList.remove('dot_active'));
