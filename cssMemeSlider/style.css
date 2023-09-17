@@ -34,13 +34,15 @@ body{
 .slider_image{
     height: 1000px;
     width: 1300px;
+    border-radius: 2%;
 }
 
 .slider_pagination{
     display: flex;
-    position: absolute;
-    margin-top: 5%;
-    right: 50px;
+    position: relative;
+    width: 1300px;
+    margin: auto;
+    justify-content: flex-end;
     column-gap: 20px;
 }
 
@@ -56,4 +58,32 @@ body{
 .dot_active{
     background-color: black;
     border-color: rgb(6, 88, 211);
+}
+
+.slider_text{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 1300px;
+    margin: auto;
+}
+
+.meme_text{
+    /* display: none; */
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    visibility: hidden;
+}
+
+@keyframes showLeft {
+    from {left:-100%;}
+    to {left:0;}
+    }
+
+.text_active{
+    /* display: flex; */
+    visibility: visible;
+    animation: showLeft 3s;
 }

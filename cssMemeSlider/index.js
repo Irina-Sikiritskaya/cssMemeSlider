@@ -1,6 +1,7 @@
 const sliderImages = document.querySelectorAll(".slider_image");
 const sliderLine = document.querySelector(".slider_line");
 const paginationDots = document.querySelectorAll(".slider_dot");
+const sliderText = document.querySelectorAll(".meme_text");
 let imageWidth = 1300;
 
 function updatePaginationDots(index) {
@@ -8,9 +9,16 @@ function updatePaginationDots(index) {
     paginationDots[index].classList.add('dot_active');
 }
 
+function updateText(index) {
+    sliderText.forEach(text=> text.classList.remove('text_active'));
+    sliderText[index].classList.add('text_active');
+};
+
+
 paginationDots.forEach((dot, index) => {
     dot.addEventListener('click', () =>{
         sliderLine.style.transform = `translateX(${-index*imageWidth}px)`
         updatePaginationDots(index);
+        updateText(index);
   })
 });
