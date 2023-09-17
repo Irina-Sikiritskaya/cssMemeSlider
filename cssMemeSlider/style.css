@@ -10,10 +10,11 @@ body{
 }
 
 .slider{
+    display: flex;
     position: relative;
     max-width: 1300px;
     height: auto;
-    margin: 0 50px;
+    margin: 50px auto;
     overflow: hidden;
 }
 
